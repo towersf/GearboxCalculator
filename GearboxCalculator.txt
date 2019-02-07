@@ -1,0 +1,14 @@
+7 campi dove inserire il rapporto (dalla 1^ alla 7^) es.: 10/34 
+1 campo dove indicare il valore del rapporto finale es.: 3.500
+Range giri motore
+
+prendi il numero di giri del motore (es 6500) e lo dividi per il rapporto di trasmissione del rapporto che ti interessa (es 0.8), ottieni il numero di giri dell'albero di trrasmissione o dell'uscita del cambio (6500/0.8=8125)
+Poi prendi questo numero e lo dividi per il rapporto al ponte (es. 3), ottieni il numero di giri del semiasse e quindi della ruota (8125/3=2708)
+Poi prendi questo numero e lo moltiplichi per la circonferenza di rotolamento (es. 1.8 m), ottieni quanti metri al minuto fa la macchina (2708*1.8=4874 m/min)
+Poi prendi questo numero e lo dividi per 1000, ottieni i kilometri al minuto (4874/1000=4.874 km/min)
+Infine prendi questo numero e lo moltiplichi per 60 e ottieni i km/h (4.874*60=292.44 km/h)
+
+
+
+(rpm / (B/A)) * (1 / (finaleB/finaleA)) * CircRotol
+

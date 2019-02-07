@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearboxCalculatorUI", "GearboxCalculatorUI\GearboxCalculatorUI.csproj", "{F5AB0CF5-26A6-47BC-92E7-0D58ED002BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearboxCalculatorCore", "GearboxCalculatorCore\GearboxCalculatorCore.csproj", "{818D3162-2D1E-4FA9-A07A-2944E17B4BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearboxCalculatorGraphDesigner", "GearboxCalculatorGraphDesigner\GearboxCalculatorGraphDesigner.csproj", "{2A2077F6-CFAC-43E7-A219-B0F512463BC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5AB0CF5-26A6-47BC-92E7-0D58ED002BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AB0CF5-26A6-47BC-92E7-0D58ED002BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AB0CF5-26A6-47BC-92E7-0D58ED002BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AB0CF5-26A6-47BC-92E7-0D58ED002BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818D3162-2D1E-4FA9-A07A-2944E17B4BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818D3162-2D1E-4FA9-A07A-2944E17B4BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818D3162-2D1E-4FA9-A07A-2944E17B4BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818D3162-2D1E-4FA9-A07A-2944E17B4BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2077F6-CFAC-43E7-A219-B0F512463BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2077F6-CFAC-43E7-A219-B0F512463BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2077F6-CFAC-43E7-A219-B0F512463BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2077F6-CFAC-43E7-A219-B0F512463BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBCE92C2-470E-4D58-8D31-204324AB6EC9}
+	EndGlobalSection
+EndGlobal
