@@ -2,11 +2,14 @@
 using GearboxCalculatorCore.Classes;
 using System;
 using System.Windows.Forms;
+using GearboxCommons.Classes;
 
 namespace GearboxCalculatorUI
 {
     public partial class Form1 : Form
     {
+        private bool _enableDraw;
+
         private Core _core;
 
         public Form1()
@@ -16,32 +19,63 @@ namespace GearboxCalculatorUI
             _core = new Core();
         }
 
-        private SpeedCalculator _getInputUserData()
+        private void Form1_Load(object sender, EventArgs e)
         {
-            SpeedCalculator data = new SpeedCalculator();
+            _enableDraw = true;
 
-            //todo farcire l'oggetto data con i valori presi dalla form
+            _draw();
+        }
+        
+        private InputData _getInputUserData()
+        {
+            var data = new InputData();
 
-            data.Prima.A = Convert.ToInt32(txPrimaA.Text);
-            data.Prima.B = Convert.ToInt32(txPrimaB.Text);
+            data.Cambio.Prima.GearA = Convert.ToInt32(txPrimaA.Text);
+            data.Cambio.Prima.GearB = Convert.ToInt32(txPrimaB.Text);
+            data.Cambio.Seconda.GearA = Convert.ToInt32(txSecondaA.Text);
+            data.Cambio.Seconda.GearB = Convert.ToInt32(txSecondaB.Text);
+            data.Cambio.Terza.GearA = Convert.ToInt32(txTerzaA.Text);
+            data.Cambio.Terza.GearB = Convert.ToInt32(txTerzaB.Text);
+            data.Cambio.Quarta.GearA = Convert.ToInt32(txQuartaA.Text);
+            data.Cambio.Quarta.GearB = Convert.ToInt32(txQuartaB.Text);
+            data.Cambio.Quinta.GearA = Convert.ToInt32(txQuintaA.Text);
+            data.Cambio.Quinta.GearB = Convert.ToInt32(txQuintaB.Text);
+            data.Cambio.Sesta.GearA = Convert.ToInt32(txSestaA.Text);
+            data.Cambio.Sesta.GearB = Convert.ToInt32(txSestaB.Text);
+            data.Cambio.Settima.GearA = Convert.ToInt32(txSettimaA.Text);
+            data.Cambio.Settima.GearB = Convert.ToInt32(txSettimaB.Text);
+            data.Cambio.Finale.GearA = Convert.ToInt32(txFinaleA.Text);
+            data.Cambio.Finale.GearB = Convert.ToInt32(txFinaleB.Text);
 
+            data.Engine.MaxRpm = Convert.ToInt32(txRpm.Text);
+            data.Engine.RefRpm = Convert.ToInt32(txRpmRef.Text);
 
+            data.Tire.AspectRatio = Convert.ToInt32(txRapportoSpalla.Text);
+            data.Tire.RimDiameterInch = Convert.ToInt32(txRaggio.Text);
+            data.Tire.WidthMm = Convert.ToInt32(txBattistrada.Text);
 
             return data;
         }
 
         private void _draw()
         {
+            if (!_enableDraw) { return; }
+
             var input = _getInputUserData();
 
             try
             {
                 var graph = _core.CalcolaGearbox(input);
                 picGraph.Image = graph.GraphImage;
+
+
+                graph.GraphImage.Save("C:\\pippo.jpg");
+
+
             }
             catch (Exception err)
             {
-                MessageBox.Show("Errore", err.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                return;
             }
         }
@@ -133,17 +167,22 @@ namespace GearboxCalculatorUI
             _draw();
         }
 
-        private void cmbBattistrada_SelectedIndexChanged(object sender, EventArgs e)
+        private void txRpmRef_TextChanged(object sender, EventArgs e)
         {
             _draw();
         }
 
-        private void cmbRapportoSpalla_SelectedIndexChanged(object sender, EventArgs e)
+        private void txBattistrada_TextChanged(object sender, EventArgs e)
         {
             _draw();
         }
 
-        private void cmbRaggio_SelectedIndexChanged(object sender, EventArgs e)
+        private void txRapportoSpalla_TextChanged(object sender, EventArgs e)
+        {
+            _draw();
+        }
+
+        private void txRaggio_TextChanged(object sender, EventArgs e)
         {
             _draw();
         }

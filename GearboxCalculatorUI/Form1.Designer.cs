@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.picGraph = new System.Windows.Forms.PictureBox();
-            this.cmbBattistrada = new System.Windows.Forms.ComboBox();
             this.lblRotolamento = new System.Windows.Forms.Label();
             this.txRpm = new System.Windows.Forms.TextBox();
             this.lblMaxGiriMotore = new System.Windows.Forms.Label();
@@ -77,10 +76,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txPrimaA = new System.Windows.Forms.TextBox();
             this.lblPrima = new System.Windows.Forms.Label();
-            this.cmbRapportoSpalla = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbRaggio = new System.Windows.Forms.ComboBox();
+            this.txRpmRef = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txBattistrada = new System.Windows.Forms.TextBox();
+            this.txRapportoSpalla = new System.Windows.Forms.TextBox();
+            this.txRaggio = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
             this.SuspendLayout();
@@ -105,17 +107,9 @@
             this.picGraph.Location = new System.Drawing.Point(6, 19);
             this.picGraph.Name = "picGraph";
             this.picGraph.Size = new System.Drawing.Size(443, 355);
+            this.picGraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picGraph.TabIndex = 0;
             this.picGraph.TabStop = false;
-            // 
-            // cmbBattistrada
-            // 
-            this.cmbBattistrada.FormattingEnabled = true;
-            this.cmbBattistrada.Location = new System.Drawing.Point(34, 307);
-            this.cmbBattistrada.Name = "cmbBattistrada";
-            this.cmbBattistrada.Size = new System.Drawing.Size(61, 21);
-            this.cmbBattistrada.TabIndex = 94;
-            this.cmbBattistrada.SelectedIndexChanged += new System.EventHandler(this.cmbBattistrada_SelectedIndexChanged);
             // 
             // lblRotolamento
             // 
@@ -132,6 +126,7 @@
             this.txRpm.Name = "txRpm";
             this.txRpm.Size = new System.Drawing.Size(72, 20);
             this.txRpm.TabIndex = 92;
+            this.txRpm.Text = "6800";
             this.txRpm.TextChanged += new System.EventHandler(this.txRpm_TextChanged);
             // 
             // lblMaxGiriMotore
@@ -243,6 +238,7 @@
             this.txFinaleB.Name = "txFinaleB";
             this.txFinaleB.Size = new System.Drawing.Size(32, 20);
             this.txFinaleB.TabIndex = 79;
+            this.txFinaleB.Text = "35";
             this.txFinaleB.TextChanged += new System.EventHandler(this.txFinaleB_TextChanged);
             // 
             // label1
@@ -260,6 +256,7 @@
             this.txFinaleA.Name = "txFinaleA";
             this.txFinaleA.Size = new System.Drawing.Size(32, 20);
             this.txFinaleA.TabIndex = 77;
+            this.txFinaleA.Text = "10";
             this.txFinaleA.TextChanged += new System.EventHandler(this.txFinaleA_TextChanged);
             // 
             // lblFinale
@@ -277,6 +274,7 @@
             this.txSettimaB.Name = "txSettimaB";
             this.txSettimaB.Size = new System.Drawing.Size(32, 20);
             this.txSettimaB.TabIndex = 75;
+            this.txSettimaB.Text = "8";
             this.txSettimaB.TextChanged += new System.EventHandler(this.txSettimaB_TextChanged);
             // 
             // label13
@@ -294,6 +292,7 @@
             this.txSettimaA.Name = "txSettimaA";
             this.txSettimaA.Size = new System.Drawing.Size(32, 20);
             this.txSettimaA.TabIndex = 73;
+            this.txSettimaA.Text = "10";
             this.txSettimaA.TextChanged += new System.EventHandler(this.txSettimaA_TextChanged);
             // 
             // lblSettima
@@ -311,6 +310,7 @@
             this.txSestaB.Name = "txSestaB";
             this.txSestaB.Size = new System.Drawing.Size(32, 20);
             this.txSestaB.TabIndex = 71;
+            this.txSestaB.Text = "10";
             this.txSestaB.TextChanged += new System.EventHandler(this.txSestaB_TextChanged);
             // 
             // label11
@@ -328,6 +328,7 @@
             this.txSestaA.Name = "txSestaA";
             this.txSestaA.Size = new System.Drawing.Size(32, 20);
             this.txSestaA.TabIndex = 69;
+            this.txSestaA.Text = "10";
             this.txSestaA.TextChanged += new System.EventHandler(this.txSestaA_TextChanged);
             // 
             // lblSesta
@@ -345,6 +346,7 @@
             this.txQuintaB.Name = "txQuintaB";
             this.txQuintaB.Size = new System.Drawing.Size(32, 20);
             this.txQuintaB.TabIndex = 67;
+            this.txQuintaB.Text = "12";
             this.txQuintaB.TextChanged += new System.EventHandler(this.txQuintaB_TextChanged);
             // 
             // label9
@@ -362,6 +364,7 @@
             this.txQuintaA.Name = "txQuintaA";
             this.txQuintaA.Size = new System.Drawing.Size(32, 20);
             this.txQuintaA.TabIndex = 65;
+            this.txQuintaA.Text = "10";
             this.txQuintaA.TextChanged += new System.EventHandler(this.txQuintaA_TextChanged);
             // 
             // lblQuinta
@@ -379,6 +382,7 @@
             this.txQuartaB.Name = "txQuartaB";
             this.txQuartaB.Size = new System.Drawing.Size(32, 20);
             this.txQuartaB.TabIndex = 63;
+            this.txQuartaB.Text = "15";
             this.txQuartaB.TextChanged += new System.EventHandler(this.txQuartaB_TextChanged);
             // 
             // label7
@@ -396,6 +400,7 @@
             this.txQuartaA.Name = "txQuartaA";
             this.txQuartaA.Size = new System.Drawing.Size(32, 20);
             this.txQuartaA.TabIndex = 61;
+            this.txQuartaA.Text = "10";
             this.txQuartaA.TextChanged += new System.EventHandler(this.txQuartaA_TextChanged);
             // 
             // lblQuarta
@@ -413,6 +418,7 @@
             this.txTerzaB.Name = "txTerzaB";
             this.txTerzaB.Size = new System.Drawing.Size(32, 20);
             this.txTerzaB.TabIndex = 59;
+            this.txTerzaB.Text = "18";
             this.txTerzaB.TextChanged += new System.EventHandler(this.txTerzaB_TextChanged);
             // 
             // label5
@@ -430,6 +436,7 @@
             this.txTerzaA.Name = "txTerzaA";
             this.txTerzaA.Size = new System.Drawing.Size(32, 20);
             this.txTerzaA.TabIndex = 57;
+            this.txTerzaA.Text = "10";
             this.txTerzaA.TextChanged += new System.EventHandler(this.txTerzaA_TextChanged);
             // 
             // lblTerza
@@ -447,6 +454,7 @@
             this.txSecondaB.Name = "txSecondaB";
             this.txSecondaB.Size = new System.Drawing.Size(32, 20);
             this.txSecondaB.TabIndex = 55;
+            this.txSecondaB.Text = "25";
             this.txSecondaB.TextChanged += new System.EventHandler(this.txSecondaB_TextChanged);
             // 
             // label3
@@ -464,6 +472,7 @@
             this.txSecondaA.Name = "txSecondaA";
             this.txSecondaA.Size = new System.Drawing.Size(32, 20);
             this.txSecondaA.TabIndex = 53;
+            this.txSecondaA.Text = "10";
             this.txSecondaA.TextChanged += new System.EventHandler(this.txSecondaA_TextChanged);
             // 
             // lblSeconda
@@ -481,6 +490,7 @@
             this.txPrimaB.Name = "txPrimaB";
             this.txPrimaB.Size = new System.Drawing.Size(32, 20);
             this.txPrimaB.TabIndex = 51;
+            this.txPrimaB.Text = "32";
             this.txPrimaB.TextChanged += new System.EventHandler(this.txPrimaB_TextChanged);
             // 
             // label2
@@ -498,6 +508,7 @@
             this.txPrimaA.Name = "txPrimaA";
             this.txPrimaA.Size = new System.Drawing.Size(32, 20);
             this.txPrimaA.TabIndex = 49;
+            this.txPrimaA.Text = "10";
             this.txPrimaA.TextChanged += new System.EventHandler(this.txPrimaA_TextChanged);
             // 
             // lblPrima
@@ -508,15 +519,6 @@
             this.lblPrima.Size = new System.Drawing.Size(33, 13);
             this.lblPrima.TabIndex = 48;
             this.lblPrima.Text = "Prima";
-            // 
-            // cmbRapportoSpalla
-            // 
-            this.cmbRapportoSpalla.FormattingEnabled = true;
-            this.cmbRapportoSpalla.Location = new System.Drawing.Point(119, 307);
-            this.cmbRapportoSpalla.Name = "cmbRapportoSpalla";
-            this.cmbRapportoSpalla.Size = new System.Drawing.Size(42, 21);
-            this.cmbRapportoSpalla.TabIndex = 95;
-            this.cmbRapportoSpalla.SelectedIndexChanged += new System.EventHandler(this.cmbRapportoSpalla_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -536,25 +538,63 @@
             this.label6.TabIndex = 97;
             this.label6.Text = "R";
             // 
-            // cmbRaggio
+            // txRpmRef
             // 
-            this.cmbRaggio.FormattingEnabled = true;
-            this.cmbRaggio.Location = new System.Drawing.Point(188, 307);
-            this.cmbRaggio.Name = "cmbRaggio";
-            this.cmbRaggio.Size = new System.Drawing.Size(42, 21);
-            this.cmbRaggio.TabIndex = 98;
-            this.cmbRaggio.SelectedIndexChanged += new System.EventHandler(this.cmbRaggio_SelectedIndexChanged);
+            this.txRpmRef.Location = new System.Drawing.Point(158, 269);
+            this.txRpmRef.Name = "txRpmRef";
+            this.txRpmRef.Size = new System.Drawing.Size(72, 20);
+            this.txRpmRef.TabIndex = 100;
+            this.txRpmRef.Text = "1200";
+            this.txRpmRef.TextChanged += new System.EventHandler(this.txRpmRef_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(155, 252);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 13);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Min Giri Motre";
+            // 
+            // txBattistrada
+            // 
+            this.txBattistrada.Location = new System.Drawing.Point(38, 308);
+            this.txBattistrada.Name = "txBattistrada";
+            this.txBattistrada.Size = new System.Drawing.Size(57, 20);
+            this.txBattistrada.TabIndex = 101;
+            this.txBattistrada.Text = "185";
+            this.txBattistrada.TextChanged += new System.EventHandler(this.txBattistrada_TextChanged);
+            // 
+            // txRapportoSpalla
+            // 
+            this.txRapportoSpalla.Location = new System.Drawing.Point(119, 308);
+            this.txRapportoSpalla.Name = "txRapportoSpalla";
+            this.txRapportoSpalla.Size = new System.Drawing.Size(32, 20);
+            this.txRapportoSpalla.TabIndex = 102;
+            this.txRapportoSpalla.Text = "60";
+            this.txRapportoSpalla.TextChanged += new System.EventHandler(this.txRapportoSpalla_TextChanged);
+            // 
+            // txRaggio
+            // 
+            this.txRaggio.Location = new System.Drawing.Point(198, 308);
+            this.txRaggio.Name = "txRaggio";
+            this.txRaggio.Size = new System.Drawing.Size(32, 20);
+            this.txRaggio.TabIndex = 103;
+            this.txRaggio.Text = "15";
+            this.txRaggio.TextChanged += new System.EventHandler(this.txRaggio_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 404);
-            this.Controls.Add(this.cmbRaggio);
+            this.Controls.Add(this.txRaggio);
+            this.Controls.Add(this.txRapportoSpalla);
+            this.Controls.Add(this.txBattistrada);
+            this.Controls.Add(this.txRpmRef);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbRapportoSpalla);
-            this.Controls.Add(this.cmbBattistrada);
             this.Controls.Add(this.lblRotolamento);
             this.Controls.Add(this.txRpm);
             this.Controls.Add(this.lblMaxGiriMotore);
@@ -604,6 +644,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
             this.ResumeLayout(false);
@@ -615,7 +656,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox picGraph;
-        private System.Windows.Forms.ComboBox cmbBattistrada;
         private System.Windows.Forms.Label lblRotolamento;
         private System.Windows.Forms.TextBox txRpm;
         private System.Windows.Forms.Label lblMaxGiriMotore;
@@ -662,10 +702,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txPrimaA;
         private System.Windows.Forms.Label lblPrima;
-        private System.Windows.Forms.ComboBox cmbRapportoSpalla;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbRaggio;
+        private System.Windows.Forms.TextBox txRpmRef;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txBattistrada;
+        private System.Windows.Forms.TextBox txRapportoSpalla;
+        private System.Windows.Forms.TextBox txRaggio;
     }
 }
 

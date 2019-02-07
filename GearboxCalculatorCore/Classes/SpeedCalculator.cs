@@ -1,25 +1,26 @@
-﻿namespace GearboxCalculatorCore.Classes
+﻿using GearboxCommons.Classes;
+
+namespace GearboxCalculatorCore.Classes
 {
     public class SpeedCalculator
     {
-        public GearRatio Rapporto;
-        public GearRatio Finale;
-        public Tire Ruota;
-        public Engine Engine;
-
-        public SpeedCalculator()
+        public GearRatio GearRatioDeltaSpeed(GearRatio marcia, GearRatio finale, Tire ruota, Engine engine)
         {
-            Rapporto = new GearRatio();
-            Ruota = new Tire();
-            Engine = new Engine();
+            marcia.MinSpeed = _calculateSpeed(marcia, finale, ruota, engine.RefRpm);
+            marcia.MaxSpeed = _calculateSpeed(marcia, finale, ruota, engine.MaxRpm);
+
+            return marcia;
         }
 
-        public double GearRatioMaxSpeedKmh()
+        private decimal _calculateSpeed(GearRatio marcia, GearRatio finale, Tire ruota, int rpm)
         {
-            var gearBoxExitRpm = Engine.RefRpm / Rapporto.GearRatioNumber();
-            var tireRpm = gearBoxExitRpm / Finale.GearRatioNumber();
-            var vehicleSpeedMeterMinute = tireRpm * Ruota.TireRollingCircumferenceM();
-            return (vehicleSpeedMeterMinute / 1000) * 60;
+            var gearBoxExitRpm = rpm / marcia.GearRatioNumber();
+
+            var tireRpm = gearBoxExitRpm / finale.GearRatioNumber();
+
+            var vehicleSpeedMeterMinute = tireRpm * ruota.TireRollingCircumferenceM();
+
+            return (decimal) (vehicleSpeedMeterMinute / 1000) * 60;
         }
 
     }

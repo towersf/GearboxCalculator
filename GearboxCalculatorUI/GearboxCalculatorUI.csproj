@@ -84,6 +84,10 @@
       <Project>{818d3162-2d1e-4fa9-a07a-2944e17b4bc0}</Project>
       <Name>GearboxCalculatorCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GearboxCommons\GearboxCommons.csproj">
+      <Project>{B8A66FB2-2102-4A2E-A01E-38EE23960E58}</Project>
+      <Name>GearboxCommons</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

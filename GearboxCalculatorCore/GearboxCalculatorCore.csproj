@@ -42,18 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Engine.cs" />
-    <Compile Include="Classes\GearRatio.cs" />
-    <Compile Include="Classes\Tire.cs" />
-    <Compile Include="Classes\RatioCalculatorResult.cs" />
+    <Compile Include="Classes\SpeedCalculator.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\SpeedCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GearboxCalculatorGraphDesigner\GearboxCalculatorGraphDesigner.csproj">
       <Project>{2a2077f6-cfac-43e7-a219-b0f512463bc7}</Project>
       <Name>GearboxCalculatorGraphDesigner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GearboxCommons\GearboxCommons.csproj">
+      <Project>{b8a66fb2-2102-4a2e-a01e-38ee23960e58}</Project>
+      <Name>GearboxCommons</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
