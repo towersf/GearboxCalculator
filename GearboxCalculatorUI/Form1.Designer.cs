@@ -106,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picGraph.Location = new System.Drawing.Point(6, 19);
             this.picGraph.Name = "picGraph";
-            this.picGraph.Size = new System.Drawing.Size(443, 355);
+            this.picGraph.Size = new System.Drawing.Size(450, 350);
             this.picGraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picGraph.TabIndex = 0;
             this.picGraph.TabStop = false;
