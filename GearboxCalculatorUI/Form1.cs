@@ -32,20 +32,35 @@ namespace GearboxCalculatorUI
 
             data.Cambio.Prima.GearA = Convert.ToInt32(txPrimaA.Text);
             data.Cambio.Prima.GearB = Convert.ToInt32(txPrimaB.Text);
+            data.Cambio.Prima.Enable = true;
+
             data.Cambio.Seconda.GearA = Convert.ToInt32(txSecondaA.Text);
             data.Cambio.Seconda.GearB = Convert.ToInt32(txSecondaB.Text);
+            data.Cambio.Seconda.Enable = true;
+
             data.Cambio.Terza.GearA = Convert.ToInt32(txTerzaA.Text);
             data.Cambio.Terza.GearB = Convert.ToInt32(txTerzaB.Text);
+            data.Cambio.Terza.Enable = true;
+
             data.Cambio.Quarta.GearA = Convert.ToInt32(txQuartaA.Text);
             data.Cambio.Quarta.GearB = Convert.ToInt32(txQuartaB.Text);
+            data.Cambio.Quarta.Enable = true;
+
             data.Cambio.Quinta.GearA = Convert.ToInt32(txQuintaA.Text);
             data.Cambio.Quinta.GearB = Convert.ToInt32(txQuintaB.Text);
+            data.Cambio.Quinta.Enable = chkAbilitaQuinta.Checked;
+
             data.Cambio.Sesta.GearA = Convert.ToInt32(txSestaA.Text);
             data.Cambio.Sesta.GearB = Convert.ToInt32(txSestaB.Text);
+            data.Cambio.Sesta.Enable = chkAbilitaSesta.Checked;
+
             data.Cambio.Settima.GearA = Convert.ToInt32(txSettimaA.Text);
             data.Cambio.Settima.GearB = Convert.ToInt32(txSettimaB.Text);
+            data.Cambio.Settima.Enable = chkAbilitaSettima.Checked;
+
             data.Cambio.Finale.GearA = Convert.ToInt32(txFinaleA.Text);
             data.Cambio.Finale.GearB = Convert.ToInt32(txFinaleB.Text);
+            data.Cambio.Finale.Enable = true;
 
             data.Engine.MaxRpm = Convert.ToInt32(txRpm.Text);
             data.Engine.RefRpm = Convert.ToInt32(txRpmRef.Text);
@@ -67,11 +82,6 @@ namespace GearboxCalculatorUI
             {
                 var graph = _core.CalcolaGearbox(input);
                 picGraph.Image = graph.GraphImage;
-
-
-                graph.GraphImage.Save("C:\\pippo.jpg");
-
-
             }
             catch (Exception err)
             {

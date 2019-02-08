@@ -6,27 +6,38 @@ namespace GearboxCalculatorGraphDesigner
 {
     public class GraphDesigner
     {
+        private Graphics _drawing;
+
+        private Pen _pen;
         public Image DisegnaGrafico(OutputData datiCalcolati)
         {
             var img = new Bitmap(355, 443);
-            var drawing = Graphics.FromImage(img);
 
-            var pen = new Pen(Color.Black);
+            _drawing = Graphics.FromImage(img);
 
-            drawing.DrawLine(pen, (int)datiCalcolati.Prima.MinSpeed, 0, (int)datiCalcolati.Prima.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Seconda.MinSpeed, 0, (int)datiCalcolati.Seconda.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Terza.MinSpeed, 0, (int)datiCalcolati.Terza.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Quarta.MinSpeed, 0, (int)datiCalcolati.Quarta.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Quinta.MinSpeed, 0, (int)datiCalcolati.Quinta.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Sesta.MinSpeed, 0, (int)datiCalcolati.Sesta.MaxSpeed, 6800);
-            drawing.DrawLine(pen, (int)datiCalcolati.Settima.MinSpeed, 0, (int)datiCalcolati.Settima.MaxSpeed, 6800);
+            _pen = new Pen(Color.Black);
 
-
+            _drawGearLine(datiCalcolati.Prima);
+            _drawGearLine(datiCalcolati.Seconda);
+            _drawGearLine(datiCalcolati.Terza);
+            _drawGearLine(datiCalcolati.Quarta);
+            _drawGearLine(datiCalcolati.Quinta);
+            _drawGearLine(datiCalcolati.Sesta);
+            _drawGearLine(datiCalcolati.Settima);
+            
             //_disegnaAsseX()
             //_disegnaAsseY()
             //_disegnaMarce();
 
             return img;
+        }
+
+        private void _drawGearLine(GearRatio gear)
+        {
+            if (gear.Enable)
+            {
+                _drawing.DrawLine(_pen, (int)gear.MinSpeed, 0, (int)gear.MaxSpeed, 6800);
+            }
         }
     }
 }

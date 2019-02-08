@@ -4,7 +4,7 @@
     {
         public int GearA { get; set; }
         public int GearB { get; set; }
-        public int Enable { get; set; }
+        public bool Enable { get; set; }
         public decimal MinSpeed { get; set; }
         public decimal MaxSpeed { get; set; }
 
